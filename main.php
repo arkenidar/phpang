@@ -11,10 +11,10 @@ function phrase_length($word_index,$words,$defs){
     }elseif( $word=="do"){
         while(true){
             if($words[$word_index+$length] == "end" ){
-				$length += 1;
+                $length += 1;
                 break;
-			}
-			$length += phrase_length($word_index+$length,$words,$defs);
+            }
+            $length += phrase_length($word_index+$length,$words,$defs);
         }
     }else{
         $argument_length = $defs[$word];
